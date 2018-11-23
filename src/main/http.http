@@ -1,0 +1,78 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/user/
+Content-Type: application/json
+
+{
+  "id": 106,
+  "userName": "escoffier5",
+  "password": "123456783",
+  "nickName": "esco3",
+  "note": "this is a test record"
+}
+
+###
+
+POST http://localhost:8080/user/multi
+Content-Type: application/json
+
+{
+  "users": [
+    {
+      "id": 108,
+      "userName": "escoffier5",
+      "password": "123456783",
+      "nickName": "esco3",
+      "note": "this is a test record 108"
+    },
+    {
+      "id": 109,
+      "userName": "escoffier5",
+      "password": "123456783",
+      "nickName": "esco3",
+      "note": "this is a test record 108"
+    }
+  ]
+}
+
+###
+
+POST http://localhost:8080/user/multi
+Content-Type: application/json
+
+[
+  {
+    "id": 116,
+    "userName": "escoffier5",
+    "password": "123456783",
+    "nickName": "esco3",
+    "note": "this is a test record 116"
+  },
+  {
+    "id": 117,
+    "userName": "escoffier5",
+    "password": "123456783",
+    "nickName": "esco3",
+    "note": "this is a test record 117"
+  }
+]
+
+###
+
+POST http://localhost:8080/err?id=123
+Content-Type: application/json
+
+{
+  "id": 106,
+  "userName": "escoffier5",
+  "password": "123456783",
+  "nickName": "esco3",
+  "note": "this is a test record"
+}
+
+###
